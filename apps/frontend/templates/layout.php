@@ -36,7 +36,7 @@
           </a>
           <div class="nav-collapse">
           <?php if(!include_slot('layout_header')):?>
-            <a class="brand" href="#">Project name</a>
+            <a class="brand" href="#">Aladeen Conducccion</a>
             <?php include_partial('default/menu');?>
           <?php endif;?>
           </div><!--/.nav-collapse -->
@@ -48,7 +48,7 @@
       <hr>
       <footer>
       <?php if(!include_slot('layout_footer')):?>
-        <p>&copy; Company 2012</p>
+        <p>&copy; TiranoSoft</p>
       <?php endif;?>
       </footer>
     </div> <!-- /container -->

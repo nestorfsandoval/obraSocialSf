@@ -17,6 +17,7 @@ class abmafiliadoActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('default', 'module');
+     $this->localidady= array(1=>'Rawson',2=>'Trelew',3=>'conecticut');
+   // $this->forward('default', 'module');
   }
 }

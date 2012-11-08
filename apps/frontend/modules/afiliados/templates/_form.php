@@ -11,6 +11,7 @@
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
             &nbsp;<a class="btn" href="<?php echo url_for('afiliados/index') ?>">Volver</a>
+          exit
           
             <input class="btn" type="submit" value="Guardar" />
         </td>

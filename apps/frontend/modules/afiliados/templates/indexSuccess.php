@@ -1,4 +1,7 @@
 <h2>Afiliados</h2>
+<form action="inde">
+    <input>
+</form>
 
 <table class="table table-hover">
   <thead>

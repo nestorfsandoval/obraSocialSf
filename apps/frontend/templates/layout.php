@@ -26,6 +26,7 @@
   <body>
   <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     <!-- sample navbar -->
+    <?php /*
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -43,6 +44,18 @@
         </div>
       </div>
     </div>
+    */ ?>
+    <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                    <ul class="nav">
+                        <li ><a href="index.php">Afiliados</a></li>
+                        <li ><a href="index.php?op=1">Prestadores</a></li>
+                        <li ><a href="index.php?op=2">Planes</a></li>
+                    </ul>
+                    </div>
+                </div>    
+            </div>
     <div class="container-fluid">
       <?php echo $sf_content ?>
       <hr>

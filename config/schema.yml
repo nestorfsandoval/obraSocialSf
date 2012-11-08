@@ -1,0 +1,39 @@
+propel:
+  _attributes:
+    package: lib.model
+    defaultIdMethod: native
+  afiliado:
+    _attributes: { phpName: Afiliado, idMethod: native }
+    id: { phpName: Id, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', primaryKey: true, autoIncrement: true, required: true }
+    nro_doc: { phpName: NroDoc, type: INTEGER, required: false, index: unique }
+    apenombre: { phpName: Apenombre, type: VARCHAR, size: '45', required: false }
+    sexo: { phpName: Sexo, type: CHAR, required: false }
+    fechanac: { phpName: Fechanac, type: DATE, required: false }
+    estadocivil: { phpName: Estadocivil, type: VARCHAR, size: '45', required: false }
+    calle: { phpName: Calle, type: VARCHAR, size: '45', required: false }
+    altura: { phpName: Altura, type: VARCHAR, size: '45', required: false }
+    piso: { phpName: Piso, type: VARCHAR, size: '45', required: false }
+    depto: { phpName: Depto, type: CHAR, required: false }
+    plan_id: { phpName: PlanId, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', required: true, foreignTable: plan, foreignReference: id }
+    tipodoc_id: { phpName: TipodocId, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', required: true, foreignTable: tipodoc, foreignReference: id }
+    reparticion_id: { phpName: ReparticionId, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', required: true, foreignTable: reparticion, foreignReference: id }
+    localidad_id: { phpName: LocalidadId, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', required: true, foreignTable: localidad, foreignReference: id }
+    fechaingreso: { phpName: Fechaingreso, type: DATE, required: false }
+    _indexes: { fk_afiliado_plan: [plan_id], fk_afiliado_tipodoc1: [tipodoc_id], fk_afiliado_reparticion1: [reparticion_id], fk_afiliado_localidad1: [localidad_id] }
+  localidad:
+    _attributes: { phpName: Localidad, idMethod: native }
+    id: { phpName: Id, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', primaryKey: true, autoIncrement: true, required: true }
+    descripcion: { phpName: Descripcion, type: VARCHAR, size: '45', required: true }
+  plan:
+    _attributes: { phpName: Plan, idMethod: native }
+    id: { phpName: Id, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', primaryKey: true, autoIncrement: true, required: true }
+    descripcion: { phpName: Descripcion, type: VARCHAR, size: '45', required: false }
+    descuento: { phpName: Descuento, type: VARCHAR, size: '45', required: false }
+  reparticion:
+    _attributes: { phpName: Reparticion, idMethod: native }
+    id: { phpName: Id, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', primaryKey: true, autoIncrement: true, required: true }
+    descripcion: { phpName: Descripcion, type: VARCHAR, size: '45', required: true }
+  tipodoc:
+    _attributes: { phpName: Tipodoc, idMethod: native }
+    id: { phpName: Id, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', primaryKey: true, autoIncrement: true, required: true }
+    descripcion: { phpName: Descripcion, type: VARCHAR, size: '45', required: true }

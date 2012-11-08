@@ -2,3 +2,15 @@ propel:
   _attributes:
     package: lib.model
     defaultIdMethod: native
+    
+  localidad:
+    descripcion: { primaryString: true}
+    
+  reparticion:
+    descripcion: { primaryString: true}
+    
+  plan:
+    descripcion: { primaryString: true}
+
+  tipodoc:
+    descripcion: { primaryString: true}

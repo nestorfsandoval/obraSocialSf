@@ -67,7 +67,7 @@ class afiliadosActions extends sfActions
     {
       $Afiliado = $form->save();
 
-      $this->redirect('afiliados/edit?id='.$Afiliado->getId());
+      $this->redirect('afiliados/index.php');
     }
   }
 }

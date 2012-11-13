@@ -53,9 +53,9 @@
                 <div class="navbar-inner">
                     <div class="container">
                     <ul class="nav">
-                        <li ><a href="index.php">Afiliados</a></li>
-                        <li ><a href="index.php?op=1">Prestadores</a></li>
-                        <li ><a href="index.php?op=2">Planes</a></li>
+                        <li ><a href="<?php echo url_for('afiliados/index');?>">Afiliados</a></li>
+                        <li ><a href="<?php echo url_for('prestadores/index');?>">Prestadores</a></li>
+                        <li ><a href="<?php echo url_for('planes/index');?>">Planes</a></li>
                     </ul>
                     </div>
                 </div>    

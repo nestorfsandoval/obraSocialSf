@@ -10,25 +10,25 @@
     width: 25%;
     float: left;
     text-align: right;
+    clear: left;
 }
-
 .abm input, .abm select{
-    width: 80%;
-    float: left;
+    width: 65%;
 }
 
 #afiliado_tipodoc_id{
-    width: 8%;
+    width: 10%;
 }
 
 #afiliado_nro_doc{
-    width: 62%;
+    width: 55%;
 }
 
 #afiliadoIzquierda{
     float: left;
     width: 50%;
 }
+
 
 #afiliadoDerecha{
     float: right;

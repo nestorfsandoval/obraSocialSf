@@ -28,6 +28,9 @@
 <?php echo $form['estadocivil']->renderLabel("Estado Civil:") ?>
 <?php echo $form['estadocivil']->renderError() ?>
 <?php echo $form['estadocivil'] ?>
+<?php echo $form['plan_id']->renderLabel("Plan:") ?>
+<?php echo $form['plan_id']->renderError() ?>
+<?php echo $form['plan_id'] ?>
 </div>
 <div id="afiliadoDerecha">
 <?php echo $form['calle']->renderLabel("Domicilio:") ?>
@@ -46,9 +49,7 @@
 <?php echo $form['depto']->renderError() ?>
 <?php echo $form['depto']->render(array('class'=>'nroDireccion')) ?>
 
-<?php echo $form['plan_id']->renderLabel("Plan:") ?>
-<?php echo $form['plan_id']->renderError() ?>
-<?php echo $form['plan_id'] ?>
+
 
 <?php echo $form['localidad_id']->renderLabel("Localidad:") ?>
 <?php echo $form['localidad_id']->renderError() ?>

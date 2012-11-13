@@ -35,6 +35,7 @@ class AfiliadoForm extends BaseAfiliadoForm
       'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->getId()), 'empty_value' => $this->getObject()->getId(), 'required' => false)),
       'nro_doc'        => new sfValidatorInteger(array('min' => 0, 'max' => 2147483647, 'required' => false)),
       'apenombre'      => new sfValidatorString(array('max_length' => 100, 'required' => true),array('required'=>'Debe ingresar un nombre')),
+      'sexo'           => new sfValidatorString(array('required' => false)),
       'fechanac'       => new sfValidatorDate(array('required' => false)),
       'estadocivil'    => new sfValidatorString(array('max_length' => 45, 'required' => false)),
       'calle'          => new sfValidatorString(array('max_length' => 45, 'required' => false)),

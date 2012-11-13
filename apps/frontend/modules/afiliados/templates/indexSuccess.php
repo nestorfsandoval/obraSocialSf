@@ -1,6 +1,8 @@
 <h2>Afiliados</h2>
-<form action="inde">
-    <input>
+<form action="<?php echo url_for('afiliados/index')?>" method="GET">
+    
+    <input class="busqueda" type="text" name="buscaAfiliado" placeholder="Ingrese nombre o nro de afiliado..." />
+    <input type="image" name="buscar" src="<?php echo image_path('lupa.png')?>"/>       
 </form>
 
 <table class="table table-hover">

@@ -11,7 +11,15 @@ class afiliadosActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->Afiliados = AfiliadoQuery::create()->find();
+    $consulta = AfiliadoQuery::create();
+    
+    if($request->getParameter('buscaAfiliado')){
+        $palabra=$request->getParameter('buscaAfiliado');
+        $consulta->findByApenombre('%'.$palabra.'%');
+        $consulta->_or();
+        $consulta->findById('%'.$palabra.'%');
+    }
+    $this->Afiliados = $consulta->find();
   }
 
   public function executeNew(sfWebRequest $request)

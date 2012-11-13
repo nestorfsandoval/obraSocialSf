@@ -7,7 +7,10 @@
   <head>
     <?php include_http_metas() ?>
     <?php include_metas() ?>
-    <?php include_title() ?>
+    <?php include_title();
+          use_javascript('jquery-1.6.2.min.js');   
+          use_javascript('jquery-ui-1.8.16.custom.js');
+          use_javascript('fnIntranet.js');?>
 
     <!-- more metas -->
     <meta charset="utf-8">
@@ -22,6 +25,7 @@
     
     <?php include_partial('default/mpProjectPlugin_css_assets'); ?>
     <?php include_stylesheets() ?>
+       
   </head>
   <body>
   <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -58,13 +62,16 @@
             </div>
     <div class="container-fluid">
       <?php echo $sf_content ?>
-      <hr>
-      <footer>
+      
+    
+    </div> 
+    <hr>
+    <div class="footer">
       <?php if(!include_slot('layout_footer')):?>
         <p>&copy; TiranoSoft</p>
       <?php endif;?>
-      </footer>
-    </div> <!-- /container -->
+    </div>
+    <!-- /container -->
     <!-- include every other js files in the project -->
     <?php include_javascripts() ?>
   </body>

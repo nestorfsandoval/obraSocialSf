@@ -5,7 +5,7 @@ propel:
   afiliado:
     _attributes: { phpName: Afiliado, idMethod: native }
     id: { phpName: Id, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', primaryKey: true, autoIncrement: true, required: true }
-    nro_doc: { phpName: NroDoc, type: INTEGER, required: false, index: unique }
+    nro_doc: { phpName: NroDoc, type: INTEGER, required: false }
     apenombre: { phpName: Apenombre, type: VARCHAR, size: '45', required: false }
     sexo: { phpName: Sexo, type: CHAR, required: false }
     fechanac: { phpName: Fechanac, type: DATE, required: false }
@@ -20,6 +20,7 @@ propel:
     localidad_id: { phpName: LocalidadId, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', required: true, foreignTable: localidad, foreignReference: id }
     fechaingreso: { phpName: Fechaingreso, type: DATE, required: false }
     _indexes: { fk_afiliado_plan: [plan_id], fk_afiliado_tipodoc1: [tipodoc_id], fk_afiliado_reparticion1: [reparticion_id], fk_afiliado_localidad1: [localidad_id] }
+    _uniques: { afiliado_U_1: [nro_doc] }
   localidad:
     _attributes: { phpName: Localidad, idMethod: native }
     id: { phpName: Id, type: INTEGER, size: '10', sqlType: 'int(10) unsigned', primaryKey: true, autoIncrement: true, required: true }

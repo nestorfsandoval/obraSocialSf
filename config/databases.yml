@@ -24,7 +24,7 @@ all:
     class:        sfPropelDatabase
     param:
       classname:  PropelPDO
-      dsn:        mysql:dbname=obrasocial;host=localhost
+      dsn:        mysql:dbname=mydb;host=localhost
       username:   root
       password:   123
       

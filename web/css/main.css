@@ -1,3 +1,41 @@
 .container-fluid{
     padding-top: 50px;
 }
+
+.nroDireccion{
+    width: 15px;
+}
+
+#afiliadoIzquierda label,#afiliadoDerecha label{
+    width: 25%;
+    float: left;
+    text-align: right;
+}
+
+.abm input, .abm select{
+    width: 80%;
+    float: left;
+}
+
+#afiliado_tipodoc_id{
+    width: 8%;
+}
+
+#afiliado_nro_doc{
+    width: 62%;
+}
+
+#afiliadoIzquierda{
+    float: left;
+    width: 50%;
+}
+
+#afiliadoDerecha{
+    float: right;
+    width: 50%;
+}
+
+.footer{
+    width: 100%;
+    clear: both;
+}

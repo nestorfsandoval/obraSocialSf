@@ -52,7 +52,30 @@ $(function() {
 		}
 		
 		//-----------------------------------USUARIOS-----------------------------------------
-		
+                $( ".vermas" )
+			.button()
+			.click(function() {
+                            var id=$(this).data('form');
+                            console.log('hizo click'+id),
+				$(id).dialog( "open" );
+			});
+		$(".masinfo").dialog({
+                        autoOpen: false,
+			height: 400,
+			width: 350,
+			modal: true,
+                        buttons: {
+				/*Boton 1*/"Crear Cuenta": function() {},
+				/*Boton 2*/Cancelar: function() {
+											$( this ).dialog( "close" );
+											}
+								},
+			close: function() {
+								$("#titAlert").html("Rellene todos los campos"),
+								allFields.val( "" ).removeClass( "ui-state-error" );
+								}
+                });
+                
 		//NUEVO USUARIO-----------------------------------------------------------------------
 		$( "#newUser" )
 			.button()

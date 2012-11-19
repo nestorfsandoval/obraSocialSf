@@ -57,7 +57,7 @@ $(function() {
 			.click(function() {
                             var id=$(this).data('form');
                             console.log('hizo click'+id),
-				$(id).dialog( "open" );
+				$(id).dialog( 'open' );
 			});
 		$(".masinfo").dialog({
                         autoOpen: false,
@@ -65,8 +65,7 @@ $(function() {
 			width: 350,
 			modal: true,
                         buttons: {
-				/*Boton 1*/"Crear Cuenta": function() {},
-				/*Boton 2*/Cancelar: function() {
+				/*Boton 2*/Cerrar: function() {
 											$( this ).dialog( "close" );
 											}
 								},

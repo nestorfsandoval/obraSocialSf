@@ -26,7 +26,7 @@
       <td><?php echo $Afiliado->getFechanac() ?></td>
       <td><?php echo ($Afiliado->getEstadocivil()==0)?'Soltero':'Casado' ?></td>      
       <td><?php echo $Afiliado->getFechaingreso() ?></td>
-      <td><a class="vermas" data-form="<?php echo $Afiliado->getTipodoc().'-'.$Afiliado->getNroDoc() ?>">Mas..</a>
+      <td><button class="vermas" data-form="<?php echo $Afiliado->getTipodoc().'-'.$Afiliado->getNroDoc() ?>">Mas..</button>
           <table class="masinfo" id="<?php echo $Afiliado->getTipodoc().'-'.$Afiliado->getNroDoc() ?>">
           <tr>
               <td>Nombre:</td><td><?php echo $Afiliado->getApenombre() ?></td>

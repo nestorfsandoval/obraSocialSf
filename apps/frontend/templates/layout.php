@@ -25,7 +25,10 @@
     
     <?php include_partial('default/mpProjectPlugin_css_assets'); ?>
     <?php include_stylesheets() ?>
-       
+    <script type="text/javascript">
+     jQuery.noConflict();
+     
+    </script>
   </head>
   <body>
   <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -53,9 +56,9 @@
                 <div class="navbar-inner">
                     <div class="container">
                     <ul class="nav">
-                        <li ><a href="index.php">Afiliados</a></li>
-                        <li ><a href="index.php?op=1">Prestadores</a></li>
-                        <li ><a href="index.php?op=2">Planes</a></li>
+                        <li ><a href="<?php echo url_for('afiliados/index')?>">Afiliados</a></li>
+                        <li ><a href="<?php echo url_for('prestadores/index')?>">Prestadores</a></li>
+                        <li ><a href="<?php echo url_for('planes/index')?>">Planes</a></li>
                     </ul>
                     </div>
                 </div>    

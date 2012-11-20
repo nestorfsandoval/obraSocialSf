@@ -1,4 +1,4 @@
-<h2>Afiliados</h2>
+<h3>Gesti&oacute;n de Afiliados</h3>
 <form action="<?php echo url_for('afiliados/index')?>" method="GET">
     
     <input class="busqueda" type="text" name="buscaAfiliado" placeholder="Ingrese nombre o nro de afiliado..." />
@@ -26,8 +26,9 @@
       <td><?php echo $Afiliado->getFechanac() ?></td>
       <td><?php echo ($Afiliado->getEstadocivil()==0)?'Soltero':'Casado' ?></td>      
       <td><?php echo $Afiliado->getFechaingreso() ?></td>
-      <td><button class="vermas" data-form="<?php echo $Afiliado->getTipodoc().'-'.$Afiliado->getNroDoc() ?>">Mas..</button>
-          <table class="masinfo" id="<?php echo $Afiliado->getTipodoc().'-'.$Afiliado->getNroDoc() ?>">
+      <td>
+          <button type="button" data-toggle="modal" data-target="#<?php echo $Afiliado->getNroDoc() ?>">Detalles</button>
+          <table id="<?php echo $Afiliado->getNroDoc() ?>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <tr>
               <td>Nombre:</td><td><?php echo $Afiliado->getApenombre() ?></td>
           </tr>

@@ -75,7 +75,7 @@ class afiliadosActions extends sfActions
     {
       $Afiliado = $form->save();
 
-      $this->redirect('afiliados/index.php');
+      $this->redirect('afiliados/index');
     }
   }
 }

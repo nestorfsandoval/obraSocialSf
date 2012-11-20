@@ -1,6 +1,6 @@
-<h1>Localidads List</h1>
+<h1>Localidades</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Id</th>
@@ -12,9 +12,11 @@
     <tr>
       <td><a href="<?php echo url_for('localidades/edit?id='.$Localidad->getId()) ?>"><?php echo $Localidad->getId() ?></a></td>
       <td><?php echo $Localidad->getDescripcion() ?></td>
+      <td><a class="btn btn-mini" href="<?php echo url_for('localidades/edit?id='.$Localidad->getId()) ?>"><i class="icon-pencil"></i></a></td>
+      <td><?php echo link_to('<i class="icon-trash"></i>', 'localidades/delete?id='.$Localidad->getId(), array('method' => 'delete', 'confirm' => 'Esta seguro?','class'=>'btn btn-mini')) ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('localidades/new') ?>">New</a>
+  <a class="btn" href="<?php echo url_for('localidades/new') ?>">Nuevo</a>

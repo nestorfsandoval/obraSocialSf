@@ -1,6 +1,6 @@
-<h1>Plans List</h1>
+<h1>Lista de Planes</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Id</th>
@@ -14,9 +14,11 @@
       <td><a href="<?php echo url_for('planes/edit?id='.$Plan->getId()) ?>"><?php echo $Plan->getId() ?></a></td>
       <td><?php echo $Plan->getDescripcion() ?></td>
       <td><?php echo $Plan->getDescuento() ?></td>
+      <td><a class="btn btn-mini" href="<?php echo url_for('planes/edit?id='.$Plan->getId()) ?>"><i class="icon-pencil"></i></a></td>
+      <td><?php echo link_to('<i class="icon-trash"></i>', 'planes/delete?id='.$Plan->getId(), array('method' => 'delete', 'confirm' => 'Esta Seguro?','class'=>'btn btn-mini')) ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('planes/new') ?>">New</a>
+  <a class="btn" href="<?php echo url_for('planes/new') ?>">Nuevo</a>

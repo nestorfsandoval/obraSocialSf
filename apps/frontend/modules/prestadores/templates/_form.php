@@ -10,11 +10,11 @@
       <tr>
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
-          &nbsp;<a href="<?php echo url_for('prestadores/index') ?>">Back to list</a>
+          &nbsp;<a href="<?php echo url_for('prestadores/index') ?>">Atras</a>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'prestadores/delete?codigo='.$form->getObject()->getCodigo(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+            &nbsp;<?php echo link_to('Delete', 'prestadores/delete?codigo='.$form->getObject()->getCodigo(), array('method' => 'delete', 'confirm' => 'Esta Seguro?')) ?>
           <?php endif; ?>
-          <input type="submit" value="Save" />
+          <input type="submit" value="Guardar" />
         </td>
       </tr>
     </tfoot>
